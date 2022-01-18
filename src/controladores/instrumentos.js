@@ -88,8 +88,8 @@ const updateInstrumentos = async (req, res) => {
       )
   
       const cantidadInstrumentos = rows[0].instrumentos_cantidad
-      const sumaInstrumentos = cantidadInstrumentos + instrumentos_cantidad
-      const restaInstrumentos = cantidadInstrumentos - instrumentos_cantidad
+      const sumaInstrumentos = cantidadInstrumentos + Number(instrumentos_cantidad)
+      const restaInstrumentos = cantidadInstrumentos - Number(instrumentos_cantidad)
 
       const cantidadInstrumentosDanados = rows[0].estadoinstrumento_danados
       const sumaInstrumentosDanados = cantidadInstrumentosDanados + Number(instrumentos_cantidad)
