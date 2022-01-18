@@ -39,7 +39,7 @@ const updatePeticionAscenso = async (req, res) => {
       await pool.query(
         'INSERT INTO peticion_ascenso VALUES($1, $2, $3, $4, $5, $6)',
         [ peticion_ascenso_id, rango_id, soldado_id, new Date(peticion_ascenso_fecha),
-          peticion_ascenso_observaciones, Boolean(peticion_ascenso_aprobacion).constructor() ]
+          peticion_ascenso_observaciones, peticion_ascenso_aprobacion ]
       )
       res.json({message: 'Inserción realizada con éxito'})
     } else {
